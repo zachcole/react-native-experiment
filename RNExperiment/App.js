@@ -12,15 +12,26 @@ import {
   Text,
   View
 } from 'react-native';
+import {
+  StackNavigator
+} from 'react-navigation';
 
-type Props = {};
-export default class App extends Component<Props> {
+class SearchPage extends Component<{}> {
+  static navigationOptions = {
+    title: 'Property Finder',
+  };
   render() {
     return (
-      <Text style={styles.description}>Search for houses to buy! (Again)</Text>
-    );  
+        <Text style={styles.description}>Search for houses to buy!</Text>
+    );
   }
 }
+
+const App = StackNavigator({
+  Home: { screen: SearchPage },
+});
+
+export default App;
 
 const styles = StyleSheet.create({
   description: {
