@@ -15,20 +15,12 @@ import {
 import {
   StackNavigator
 } from 'react-navigation';
-
-class SearchPage extends Component<{}> {
-  static navigationOptions = {
-    title: 'Property Finder',
-  };
-  render() {
-    return (
-        <Text style={styles.description}>Search for houses to buy!</Text>
-    );
-  }
-}
+import SearchPage from './SearchPage';
+import SearchResults from './SearchResults';
 
 const App = StackNavigator({
   Home: { screen: SearchPage },
+  Results: { screen: SearchResults },
 });
 
 export default App;
